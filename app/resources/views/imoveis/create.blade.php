@@ -68,6 +68,7 @@
                         <option>Apartamento</option>
                         <option>Casa</option>
                         <option>Kitnet</option>
+                        <option>Galpão</option>
                     </select>
                 </div>
             </div>
