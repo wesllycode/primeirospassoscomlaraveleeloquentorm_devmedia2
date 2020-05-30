@@ -40,7 +40,8 @@ class ImovelController extends Controller
      */
     public function index()
     {
-        //
+        $imoveis = Imovel::all();
+        return view('imoveis.index',compact('imoveis'));
     }
 
     /**
