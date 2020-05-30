@@ -29,7 +29,7 @@ class CreateImovelsTable extends Migration
             $table->float('preco');
             $table->integer('qtdQuartos');
             $table->integer('qtdJanelas');
-            $table->integer('qtdlampadas');
+            $table->integer('qtdLampadas');
             $table->integer('qtdBanheiro');
             $table->enum('garagem',['sim','não']);
             $table->enum('tipo',['apartamento','casa','kitnet','galpão']);

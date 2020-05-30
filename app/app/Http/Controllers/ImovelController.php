@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Imovel;
 
 class ImovelController extends Controller
 {
@@ -34,7 +35,9 @@ class ImovelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dados = $request->all();
+        Imovel::create($dados);
+        return redirect()->route('imoveis.index');
     }
 
     /**
