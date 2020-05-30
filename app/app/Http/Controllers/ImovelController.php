@@ -22,7 +22,7 @@ class ImovelController extends Controller
             "cepEndereco" => "required" ,
             "pontoReferenciaEndereco" => "required",
             "imgImovel" => "required",
-            "preco" => "required",
+            "preco" => "required | numeric",
             "qtdQuartos" => "required | numeric",
             "qtdJanelas" => "required | numeric",
             "qtdLampadas" => "required | numeric",
@@ -63,7 +63,7 @@ class ImovelController extends Controller
     {
         $validator = $this->validarImovel($request);
         if($validator->fails()){
-            return redirect()->back()->withErros($validator->errors());
+            return redirect()->back()->withErrors($validator->errors());
         }
         $dados = $request->all();
         Imovel::create($dados);
