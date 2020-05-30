@@ -1,7 +1,7 @@
 @extends('shared.base')
 
 @section('content')
-    <form method="post" action="">
+    <form method="post" action="{{route ('imoveis.store')}}">
         {{ csrf_field() }}
         <h4>Dados para cadastrar o imóvel</h4>
         <hr>
@@ -10,13 +10,13 @@
             <input type="text" class="form-control" placeholder="Descrição" name="descricao" required>
         </div>
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-5">
                 <div class="form-group">
-                    <label for="empresaImovel">Empresa do Imóvel</label>
+                    <label for="empresaImovel">Empresa do imóvel</label>
                     <input type="text" class="form-control" placeholder="Empresa do Imóvel" name="empresaImovel" required>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label for="preco">Preço</label>
                     <input type="text" class="form-control" placeholder="Preço" name="preco" required>
@@ -24,26 +24,32 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="qtdQuartos">Quantidade de Quartos</label>
+                    <label for="imgImovel">Imagem do imóvel</label>
+                    <input type="text" class="form-control" placeholder="url da imagem" name="imgImovel" required>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="qtdQuartos">Quantidade de quartos</label>
                     <input type="number" class="form-control" placeholder="Quantidade de Quartos" required name="qtdQuartos">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="qtdJanelas">Quantidade de Janelas</label>
+                    <label for="qtdJanelas">Quantidade de janelas</label>
                     <input type="number" class="form-control" placeholder="Quantidade de Janelas" required name="qtdJanelas">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="qtdlampadas">Quantidade de Lâmpadas</label>
-                    <input type="number" class="form-control" placeholder="Quantidade de Janelas" required name="qtdlampadas">
+                    <label for="qtdlampadas">Quantidade de lâmpadas</label>
+                    <input type="number" class="form-control" placeholder="Quantidade de lâmpadas" required name="qtdLampadas">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="qtdBanheiro">Quantidade de Banheiro</label>
-                    <input type="number" class="form-control" placeholder="Quantidade de Baneheiro" required name="qtdBanheiro">
+                    <label for="qtdBanheiro">Quantidade de banheiro</label>
+                    <input type="number" class="form-control" placeholder="Quantidade de Banheiro" required name="qtdBanheiro">
                 </div>
             </div>
         </div>
@@ -60,8 +66,8 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="tipo">Garagem</label>
-                    <select class="form-control" name="tipo" required>
+                    <label for="garagem">Garagem</label>
+                    <select class="form-control" name="garagem" required>
                         <option>Sim</option>
                         <option>Não</option>
                     </select>
@@ -69,7 +75,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="qtdQuartos">Finalidade do imóvel</label>
+                    <label for="finalidade">Finalidade do imóvel</label>
                     <select class="form-control" name="finalidade" required>
                         <option>Venda</option>
                         <option>Locação</option>
@@ -107,7 +113,7 @@
             </div>
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="pontoReferenciaEndereco">Ponto de Referência</label>
+                    <label for="pontoReferenciaEndereco">Ponto de referência</label>
                     <input type="text" class="form-control" placeholder="CEP" required name="pontoReferenciaEndereco">
                 </div>
             </div>
@@ -125,7 +131,7 @@
             </div>
             <div class="col-md-2">
                 <div class="form-group">
-                    <label for="numero">Número</label>
+                    <label for="numeroEndereco">Número</label>
                     <input type="number" class="form-control" placeholder="Número" required name="numeroEndereco">
                 </div>
             </div>
