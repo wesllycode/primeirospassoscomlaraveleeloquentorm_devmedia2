@@ -122,7 +122,7 @@
             <div class="col-md-8">
                 <div class="form-group">
                     <label for="pontoReferenciaEndereco">Ponto de referência</label>
-                    <input type="text" class="form-control" placeholder="CEP" required name="pontoReferenciaEndereco">
+                    <input type="text" class="form-control" placeholder="Ponto de referência" required name="pontoReferenciaEndereco">
                 </div>
             </div>
         </div>

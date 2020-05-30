@@ -24,7 +24,7 @@
                                 <td>{{$imovel->finalidade}}</td>
                                 <td>{{$imovel->tipo}}</td>
                                 <td>
-                                    <a href="#"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="{{route('imoveis.edit', $imovel->id)}}"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a href="#"><i class="glyphicon glyphicon-trash"></i></a>
                                     <a href="{{route('imoveis.show', $imovel->id)}}"><i class="glyphicon glyphicon-zoom-in"></i></a>
                                 </td>
