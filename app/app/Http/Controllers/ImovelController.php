@@ -105,6 +105,11 @@ class ImovelController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validator = $this->validarImovel($request);
+
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator->errors());
+        }
         $imovel = Imovel::find($id);
 
         $dados = $request->all();
