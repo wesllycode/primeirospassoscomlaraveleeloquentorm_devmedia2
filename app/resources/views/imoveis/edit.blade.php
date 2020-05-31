@@ -3,7 +3,7 @@
     <div class="panel panel-default">
     <div class="panel-heading"><h3>Editar os dados do imóvel</h3></div>
         <div class="panel-body">
-            <form method="post" action="">
+            <form method="post" action="{{route('imoveis.update', $imovel->id)}}">
                 <h4>Dados do imóvel</h4>
                 <hr>
                 <div class="form-group">
