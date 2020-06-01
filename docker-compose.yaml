@@ -4,7 +4,7 @@ services:
   #PHP Service
   app:
     # Aqui ele vai construir a minha aplicação onde vai ficar os arquivos do Laravel
-    build: 
+    build:
       context: ./app/
       dockerfile: Dockerfile-app-php-fpm
     #nome do meu container
@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
     # Se eu descomitar vai dá um erro, vou precisar fazer processo que tem no arquivo em texto instrucoes
     volumes:
-     - ./app/:/var/www
+      - ./app/:/var/www
     networks:
       - app-network-laravel
     environment:
@@ -32,18 +32,18 @@ services:
   #NGINX Service
   web:
     build:
-      context:  ./docker/nginx 
+      context:  ./docker/nginx
       dockerfile: Dockerfile-nginx
     container_name: "nginx"
     tty: true
     restart: unless-stopped
-    ports: 
+    ports:
       - "8081:80"
     volumes:
-      - ./app/:/var/www 
+      - ./app/:/var/www
     networks:
       - app-network-laravel
-       
+
   #REDIS Service
   redis:
     image: redis:alpine
@@ -81,7 +81,7 @@ services:
       timeout: 10s
       retries: 10
 
-  #PHPMYADMIN  Service  
+  #PHPMYADMIN  Service
   phpmyadmin:
     container_name: "phpmyadmin"
     image: phpmyadmin/phpmyadmin:latest
@@ -93,7 +93,7 @@ services:
     ports:
       - 8082:80
     networks:
-     - app-network-laravel
+      - app-network-laravel
 
 networks:
   app-network-laravel:
