@@ -10,7 +10,29 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <title>Administração de Imóveis</title>
+        <title>CRUD - Cadastro de Imóveis</title>
+        <!-- Primary Meta Tags -->
+        <title>CRUD básico de imobiliária</title>
+        <meta name="title" content="CRUD básico de imobiliária">
+        <meta name="description" content="Sistema de cadastro de imóveis para apartamentos, casas e entre outros.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://metatags.io/">
+        <meta property="og:title" content="CRUD básico de imobiliária">
+        <meta property="og:description" content="Sistema de cadastro de imóveis para apartamentos, casas e entre outros.">
+        <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://metatags.io/">
+        <meta property="twitter:title" content="CRUD básico de imobiliária">
+        <meta property="twitter:description" content="Sistema de cadastro de imóveis para apartamentos, casas e entre outros.">
+        <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
 </head>
 <style>
     *{
