@@ -10,7 +10,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <title>CRUD - Cadastro de Imóveis</title>
+        <title>CRUD - Cadastro de Imóveis 2020</title>
         <!-- Primary Meta Tags -->
         <title>CRUD básico de imobiliária</title>
         <meta name="title" content="CRUD básico de imobiliária">
