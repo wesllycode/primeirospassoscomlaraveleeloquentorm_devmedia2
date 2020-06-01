@@ -32,7 +32,7 @@
                             <tr>
                                 <td>{{$imovel->descricao}}</td>
                                 <td>{{$imovel->cidadeEndereco}}</td>
-                                <td>R$ {{$imovel->preco}}</td>
+                                <td>R$ {{number_format($imovel->preco,2,',','.')}}</td>
                                 <td>{{$imovel->finalidade}}</td>
                                 <td>{{$imovel->tipo}}</td>
                                 <td>
