@@ -2,6 +2,18 @@
 @section('content')
    <div class="panel panel-default">
        <div class="panel-heading">Lista de Imóveis</div>
+       <form method="GET" action="{{route('imoveis.index','buscar')}}">
+           <div class="row">
+               <div class="col-md-12">
+                   <div class="input-group">
+                       <input type="text" class="form-control" placeholder="Digite o nome da cidade" name="buscar">
+                       <span class="input-group-btn">
+                           <button class="btn btn-default" type="submit">Procurar</button>
+                       </span>
+                   </div>
+               </div>
+           </div>
+       </form>
        <div class="row">
            <div class="col-md-12">
                <table class="table table-bordered">
