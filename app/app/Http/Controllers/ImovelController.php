@@ -127,7 +127,9 @@ class ImovelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Responsável para remover registro do banco de dados
+        Imovel::find($id)->delete();
+        return redirect()->route('imoveis.index');
     }
 
     public function remover($id)
