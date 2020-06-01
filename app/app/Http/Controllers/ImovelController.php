@@ -129,4 +129,11 @@ class ImovelController extends Controller
     {
         //
     }
+
+    public function remover($id)
+    {
+        $imovel = Imovel::find($id);
+
+        return view('imoveis.remove',compact('imovel'));
+    }
 }
