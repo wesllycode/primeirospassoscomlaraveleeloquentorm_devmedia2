@@ -55,8 +55,6 @@ class ImovelController extends Controller
         }else{
             $imoveis = DB::table('imoveis')->paginate($qtd);
         }
-
-        $imoveis = DB::table('imoveis')->paginate($qtd);
         $imoveis = $imoveis->appends(Request::capture()->except('page'));
 
         return view('imoveis.index',compact('imoveis'));
